@@ -3,13 +3,15 @@ import { ReactNode } from 'react';
 export default function FramedSection({
   children,
   heading,
+  mbHeading,
 }: {
   children: ReactNode;
   heading: string;
+  mbHeading: string;
 }) {
   return (
     <section
-      id={`section-${heading.toLowerCase()}`}
+      id={`section-${heading.toLowerCase().replace(/\s+/g, '-')}`}
       className='pt-10 sm:pt-16 md:py-20 px-4 sm:px-8 flex justify-center'
     >
       <div
@@ -19,8 +21,13 @@ export default function FramedSection({
           md:outline-[15px] md:outline-[#4B372E]
           py-10 md:py-0'
       >
-        <div className='md:hidden mb-6 text-center '>
-          <h2 className='font-bold text-2xl'>{heading}</h2>
+        <div className='md:hidden mb-6 text-center'>
+          <h2
+            id={`heading-${heading.toLowerCase().replace(/\s+/g, '-')}`}
+            className='font-bold text-2xl'
+          >
+            {mbHeading}
+          </h2>
         </div>
 
         <div className='hidden md:block absolute -top-[30px] left-1/2 -translate-x-1/2'>
@@ -40,7 +47,10 @@ export default function FramedSection({
 
 export function CornerFrame({ className }: { className?: string }) {
   return (
-    <div className={`absolute w-[40px] h-[40px] pointer-events-none ${className}`}>
+    <div
+      className={`absolute w-[40px] h-[40px] pointer-events-none ${className}`}
+      aria-hidden='true'
+    >
       <div className='absolute top-0 left-0 h-[60px] w-[15px] bg-[#604B3A]' />
       <div className='absolute top-0 left-0 h-[15px] w-[60px] bg-[#604B3A]' />
 
@@ -55,10 +65,18 @@ export function CornerFrame({ className }: { className?: string }) {
 
 export function SectionTitleSign({ heading }: { heading: string }) {
   return (
-    <div className='relative bg-[#5F493C] px-10 py-4 w-fit rounded-sm border-4 border-[#3E2D23] shadow-[0px_4px_0_#3E2D23]'>
-      <div className='absolute inset-2 border-2 border-[#8D7668] pointer-events-none rounded-sm' />
-
-      <h2 className='text-xl font-bold text-white text-center pixel-font tracking-wide relative z-10'>
+    <div
+      role='presentation'
+      className='relative bg-[#5F493C] px-10 py-4 w-fit rounded-sm border-4 border-[#3E2D23] shadow-[0px_4px_0_#3E2D23]'
+    >
+      <div
+        className='absolute inset-2 border-2 border-[#8D7668] pointer-events-none rounded-sm'
+        aria-hidden='true'
+      />
+      <h2
+        id={`heading-${heading.toLowerCase().replace(/\s+/g, '-')}`}
+        className='text-xl font-bold text-white text-center pixel-font tracking-wide relative z-10'
+      >
         {heading}
       </h2>
     </div>

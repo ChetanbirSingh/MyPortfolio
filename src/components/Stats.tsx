@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function StatsSection() {
   return (
-    <FramedSection heading='Stats'>
+    <FramedSection heading='Stats' mbHeading='About Me'>
       <motion.div
         className='flex flex-col lg:flex-row gap-8 px-0 md:px-5 py-5 md:py-20'
         initial={{ opacity: 0 }}

@@ -19,7 +19,7 @@ import { FaCuttlefish } from 'react-icons/fa';
 
 export default function Inventory() {
   return (
-    <FramedSection heading='Inventory'>
+    <FramedSection heading='Inventory' mbHeading='Skills'>
       <div className='grid grid-cols-1 sm:grid-cols-2 gap-8 md:p-20 p-2'>
         {skills.map(({ name, icon, level, barColor }, idx) => (
           <article key={idx} className='skill-item' aria-labelledby={`skill-${idx}`}>
@@ -30,7 +30,7 @@ export default function Inventory() {
               >
                 {icon}
               </div>
-              <h3 id={`skill-${idx}`} className='text-white pixel-font text-base'>
+              <h3 id={`skill-${idx}`} className='text-white  text-1xl'>
                 {name}
               </h3>
             </div>
