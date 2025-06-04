@@ -3,7 +3,7 @@ import Stats from '@/components/Stats';
 import Inventory from '@/components/Inventory';
 import TrainingLog from '@/components/TrainingLog';
 import SideQuests from '@/components/SideQuests';
-
+import ContactSection from '@/components/Contact';
 export default function Home() {
   return (
     <main>
@@ -12,6 +12,7 @@ export default function Home() {
       <Inventory />
       <SideQuests />
       <TrainingLog />
+      <ContactSection />
     </main>
   );
 }
