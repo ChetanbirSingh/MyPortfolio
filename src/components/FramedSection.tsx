@@ -11,7 +11,7 @@ export default function FramedSection({
 }) {
   return (
     <section
-      id={`section-${heading.toLowerCase().replace(/\s+/g, '-')}`}
+      id={`${mbHeading.toLowerCase().replace(/\s+/g, '-')}-section`}
       className='pt-10 md:pt-16 md:py-20 px-4 sm:px-8 flex justify-center'
     >
       <div
