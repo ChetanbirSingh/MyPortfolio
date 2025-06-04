@@ -34,7 +34,7 @@ const sideQuests = [
 
 export default function SideQuests() {
   return (
-<section id="projects-section" className="pt-10 md:pt-16">
+<section id="projects-section" className="pt-10 md:pt-16 md:px-10 px-2">
   <div className="flex justify-center items-center">
     <SectionTitleSign heading="Side Quests" mbHeading="Projects" />
   </div>
