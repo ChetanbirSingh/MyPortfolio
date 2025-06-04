@@ -12,7 +12,7 @@ export default function FramedSection({
   return (
     <section
       id={`section-${heading.toLowerCase().replace(/\s+/g, '-')}`}
-      className='pt-10 sm:pt-16 md:py-20 px-4 sm:px-8 flex justify-center'
+      className='pt-10 md:pt-16 md:py-20 px-4 sm:px-8 flex justify-center'
     >
       <div
         className='relative w-full
