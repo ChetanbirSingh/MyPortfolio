@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Press_Start_2P, Space_Mono } from 'next/font/google';
 import './globals.css';
+import Navbar from '@/components/Navbar';
 
 const pressStart2p = Press_Start_2P({
   variable: '--font-press-start-2p',
@@ -29,7 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${pressStart2p.className} ${spaceMono.variable} antialiased`}>{children}</body>
+      <body className={`${pressStart2p.className} ${spaceMono.variable} antialiased`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
