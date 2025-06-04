@@ -30,7 +30,7 @@ const trainings = [
 export default function TrainingLog() {
   return (
     <FramedSection heading='Training Log' mbHeading='Education'>
-      <div className='relative px-4 md:px-6 py-10 md:py-20'>
+      <div className='relative md:px-6 py-10 md:py-20'>
         <ul className='relative z-10 flex flex-col'>
           {trainings.map(({ status, title, desc, date, border }, i) => (
             <motion.li
@@ -76,7 +76,7 @@ export default function TrainingLog() {
                   </span>
                 </div>
 
-                <h3 className='text-white text-xl md:text-2xl font-bold pixel-font leading-tight'>
+                <h3 className='text-white text-xl md:text-xl font-bold pixel-font leading-tight'>
                   {title}
                 </h3>
 

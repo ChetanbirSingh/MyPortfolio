@@ -14,7 +14,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
-          className='flex flex-col items-center justify-center text-center gap-6 px-4'
+          className='flex flex-col items-center justify-center text-center gap-6'
         >
           <motion.h1
             initial={{ opacity: 0 }}
