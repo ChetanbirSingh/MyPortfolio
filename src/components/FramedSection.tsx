@@ -9,23 +9,31 @@ export default function FramedSection({
 }) {
   return (
     <section
-      id={`section-${heading.toLocaleLowerCase()}`}
-      className=' py-16 md:py-20 md:p-10 flex justify-center'
+      id={`section-${heading.toLowerCase()}`}
+      className='pt-10 sm:pt-16 md:py-20 px-4 sm:px-8 flex justify-center'
     >
       <div
-        className='relative w-full bg-[#736354] border-[15px] border-[#50473E] 
-      outline-[15px] outline-[#4B372E]'
+        className='relative w-full
+          md:bg-[#736354] 
+          md:border-[15px] md:border-[#50473E] 
+          md:outline-[15px] md:outline-[#4B372E]
+          py-10 md:py-0'
       >
-        {children}
-        <div className='absolute -top-[30px] left-1/2 -translate-x-1/2'>
+        <div className='md:hidden mb-6 text-center '>
+          <h2 className='font-bold text-2xl'>{heading}</h2>
+        </div>
+
+        <div className='hidden md:block absolute -top-[30px] left-1/2 -translate-x-1/2'>
           <SectionTitleSign heading={heading} />
         </div>
-        <CornerFrame className='-top-[30px] -left-[30px]' />
-        <CornerFrame className='-top-[30px] -right-[30px] rotate-90' />
-        <CornerFrame className='-bottom-[30px] -right-[30px] rotate-180' />
-        <CornerFrame className='-bottom-[30px] -left-[30px] -rotate-90' />
+
+        {children}
+
+        <CornerFrame className='-top-[30px] -left-[30px] hidden md:flex' />
+        <CornerFrame className='-top-[30px] -right-[30px] rotate-90 hidden md:flex' />
+        <CornerFrame className='-bottom-[30px] -right-[30px] rotate-180 hidden md:flex' />
+        <CornerFrame className='-bottom-[30px] -left-[30px] -rotate-90 hidden md:flex' />
       </div>
-      p
     </section>
   );
 }
@@ -50,7 +58,7 @@ export function SectionTitleSign({ heading }: { heading: string }) {
     <div className='relative bg-[#5F493C] px-10 py-4 w-fit rounded-sm border-4 border-[#3E2D23] shadow-[0px_4px_0_#3E2D23]'>
       <div className='absolute inset-2 border-2 border-[#8D7668] pointer-events-none rounded-sm' />
 
-      <h2 className='text-xl sm:text-2xl font-bold text-white text-center pixel-font tracking-wide relative z-10'>
+      <h2 className='text-xl font-bold text-white text-center pixel-font tracking-wide relative z-10'>
         {heading}
       </h2>
     </div>
