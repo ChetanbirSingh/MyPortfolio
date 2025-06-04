@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-
+import SectionTitleSign from './SectionTitleSign';
 export default function FramedSection({
   children,
   heading,
@@ -21,17 +21,8 @@ export default function FramedSection({
           md:outline-[15px] md:outline-[#4B372E]
           py-10 md:py-0'
       >
-        <div className='md:hidden mb-6 text-center'>
-          <h2
-            id={`heading-${heading.toLowerCase().replace(/\s+/g, '-')}`}
-            className='font-bold text-2xl'
-          >
-            {mbHeading}
-          </h2>
-        </div>
-
-        <div className='hidden md:block absolute -top-[30px] left-1/2 -translate-x-1/2'>
-          <SectionTitleSign heading={heading} />
+        <div className='absolute -top-[30px] left-1/2 -translate-x-1/2'>
+          <SectionTitleSign heading={heading} mbHeading={mbHeading} />
         </div>
 
         {children}
@@ -59,26 +50,6 @@ export function CornerFrame({ className }: { className?: string }) {
 
       <div className='absolute top-[30px] left-[30px] h-[20px] w-[10px] bg-[#494949]' />
       <div className='absolute top-[30px] left-[30px] h-[10px] w-[20px] bg-[#494949]' />
-    </div>
-  );
-}
-
-export function SectionTitleSign({ heading }: { heading: string }) {
-  return (
-    <div
-      role='presentation'
-      className='relative bg-[#5F493C] px-10 py-4 w-fit rounded-sm border-4 border-[#3E2D23] shadow-[0px_4px_0_#3E2D23]'
-    >
-      <div
-        className='absolute inset-2 border-2 border-[#8D7668] pointer-events-none rounded-sm'
-        aria-hidden='true'
-      />
-      <h2
-        id={`heading-${heading.toLowerCase().replace(/\s+/g, '-')}`}
-        className='text-xl font-bold text-white text-center pixel-font tracking-wide relative z-10'
-      >
-        {heading}
-      </h2>
     </div>
   );
 }
