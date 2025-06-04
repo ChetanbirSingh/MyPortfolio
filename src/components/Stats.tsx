@@ -27,9 +27,10 @@ export default function StatsSection() {
           >
             <Image
               src='/avatar.webp'
-              alt='Pixel avatar'
+              alt='Pixel avatar of a developer sitting on bricks, working on a Laptop'
               width={180}
               height={180}
+              sizes='(max-width: 640px) 120px, (max-width: 1024px) 160px, 180px'
               className='mt-3'
             />
           </motion.div>

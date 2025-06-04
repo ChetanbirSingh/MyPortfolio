@@ -1,12 +1,19 @@
 import type { Metadata } from 'next';
-import { Press_Start_2P } from 'next/font/google';
+import { Press_Start_2P, Space_Mono } from 'next/font/google';
 import './globals.css';
 
 const pressStart2p = Press_Start_2P({
-  variable: '--font-geist-mono',
+  variable: '--font-press-start-2p',
   subsets: ['latin'],
   weight: ['400'],
   fallback: ['Arial', 'Helvetica', 'sans-serif'],
+});
+
+const spaceMono = Space_Mono({
+  variable: '--font-space-mono',
+  subsets: ['latin'],
+  weight: ['400'],
+  fallback: ['sans-serif', 'Arial', 'Helvetica'],
 });
 
 export const metadata: Metadata = {
@@ -22,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${pressStart2p.className} antialiased`}>{children}</body>
+      <body className={`${pressStart2p.className} ${spaceMono.variable} antialiased`}>{children}</body>
     </html>
   );
 }
