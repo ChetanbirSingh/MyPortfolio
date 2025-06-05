@@ -70,7 +70,9 @@ export default function Header() {
             animate={{ scale: 1 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => window.open('https://www.github.com/ChetanbirSingh')}
+            onClick={() =>
+              window.open('https://www.github.com/ChetanbirSingh', '_blank', 'noopener,noreferrer')
+            }
             className='px-4 py-2 bg-black text-white rounded-xl cursor-pointer'
           >
             GitHub
