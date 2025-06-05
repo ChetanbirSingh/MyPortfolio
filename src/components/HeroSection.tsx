@@ -39,8 +39,16 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.4 }}
+            className='select-none'
           >
-            <Button theme='yellow'>My Resume</Button>
+            <Button
+              onClick={() => {
+                console.warn('TODO: hook up resume download!');
+              }}
+              theme='yellow'
+            >
+              My Resume
+            </Button>
           </motion.div>
         </motion.div>
       </div>
