@@ -13,30 +13,32 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
           className='flex flex-col items-center justify-center text-center gap-6'
         >
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
-          >
-            Chetanbir Singh
-          </motion.h1>
+          <div className='md:text-3xl'>
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.4 }}
+            >
+              Chetanbir Singh
+            </motion.h1>
+          </div>
 
           <motion.p
-            className='text-2xl sm:text-3xl font-semibold'
+            className='md:text-3xl'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.8, duration: 0.6 }}
+            transition={{ delay: 0.6, duration: 0.4 }}
           >
-            frontend web dev
+            Frontend Dev. No Bugs Survive.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2.2, duration: 0.6 }}
+            transition={{ delay: 0.9, duration: 0.4 }}
           >
             <Button theme='yellow'>My Resume</Button>
           </motion.div>
