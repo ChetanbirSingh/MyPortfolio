@@ -33,38 +33,36 @@ export default function StatsSection() {
           <div className='px-4 py-3 mt-5 hidden md:block bg-black text-white text-center border-b-[5px] border-white'>
             Chetanbir Singh
           </div>
-
-          <div className='relative w-[250px] h-[250px] mt-4'>
-            <motion.div
-              drag
-              dragConstraints={dragBoundaryRef}
-              dragElastic={0.2}
-              dragTransition={{ bounceStiffness: 300, bounceDamping: 12 }}
-              whileTap={{
-                scale: 1.1,
-                rotate: 2,
-              }}
-              whileHover={{
-                scale: 1.05,
-                rotate: -1,
-                transition: { type: 'spring', stiffness: 300, damping: 15 },
-              }}
-              initial={{ x: -100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
-              viewport={{ once: true }}
-              className='cursor-grab active:cursor-grabbing'
-            >
-              <Image
-                src='/avatar.webp'
-                alt='Pixel avatar of a developer sitting on bricks, working on a Laptop'
-                width={200}
-                height={200}
-                className='select-none pointer-events-none'
-                draggable={false}
-              />
-            </motion.div>
-          </div>
+          <motion.div
+            drag
+            dragConstraints={dragBoundaryRef}
+            dragElastic={0.2}
+            dragTransition={{ bounceStiffness: 300, bounceDamping: 12 }}
+            whileTap={{
+              scale: 1.1,
+              rotate: 2,
+            }}
+            whileHover={{
+              scale: 1.05,
+              rotate: -1,
+              transition: { type: 'spring', stiffness: 300, damping: 15 },
+            }}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true }}
+            className='cursor-grab active:cursor-grabbing w-[200px] h-[250px] relative'
+          >
+            <Image
+              src='/avatar.webp'
+              alt='Pixel avatar of a developer sitting on bricks, working on a Laptop'
+              fill
+              sizes='(max-width: 640px) 120px, (max-width: 1024px) 160px, 200px'
+              className='select-none pointer-events-none'
+              draggable={false}
+              style={{ height: '100%', width: '100%' }}
+            />
+          </motion.div>
         </div>
 
         <div className='flex flex-col justify-between gap-4 text-sm sm:text-base sm:max-w-3xl leading-6 p-0 md:px-2 '>
