@@ -21,50 +21,45 @@ export default function Inventory() {
   return (
     <FramedSection heading='Inventory' mbHeading='Skills'>
       <div className='grid grid-cols-1 sm:grid-cols-2 gap-8 md:p-20 p-2'>
-        {skills.map(({ name, icon, level, barColor }, idx) => (
-          <article key={idx} className='skill-item' aria-labelledby={`skill-${idx}`}>
-            <div className='flex items-center gap-4 mb-3'>
-              <div
-                className='w-9 h-9 bg-black rounded-sm flex items-center justify-center'
-                aria-hidden='true'
-              >
-                {icon}
+        {skills.map(({ name, icon, level, barColor }, idx) => {
+          const [val, max] = level.split('/').map(Number);
+          if (isNaN(val) || isNaN(max)) return null;
+
+          return (
+            <article key={idx} className='skill-item' aria-labelledby={`skill-${idx}`}>
+              <div className='flex items-center gap-4 mb-3'>
+                <div
+                  className='w-9 h-9 bg-black rounded-sm flex items-center justify-center'
+                  aria-hidden='true'
+                >
+                  {icon}
+                </div>
+                <h3 id={`skill-${idx}`} className='text-white text-1xl'>
+                  {name}
+                </h3>
               </div>
-              <h3 id={`skill-${idx}`} className='text-white  text-1xl'>
-                {name}
-              </h3>
-            </div>
 
-            <div
-              className='relative w-full h-6 bg-[#2f2f2f] rounded-sm'
-              role='progressbar'
-              aria-valuenow={parseFloat(level)}
-              aria-valuemin={0}
-              aria-valuemax={10}
-              aria-label={`${name} proficiency`}
-            >
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{
-                  width: `${
-                    (parseInt(level.split('/')[0]) / parseInt(level.split('/')[1])) * 100
-                  }%`,
-                }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, ease: 'easeOut' }}
-                className={`absolute top-0 left-0 h-full ${barColor} rounded-sm`}
-              />
-
-              <p
-                className='absolute 
-              right-1 top-1/2 -translate-y-1/2 
-              text-sm'
+              <div
+                className='relative w-full h-6 bg-[#2f2f2f] rounded-sm'
+                role='progressbar'
+                aria-valuenow={val}
+                aria-valuemin={0}
+                aria-valuemax={max}
+                aria-label={`${name} proficiency`}
               >
-                level {level}
-              </p>
-            </div>
-          </article>
-        ))}
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${(val / max) * 100}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, ease: 'easeOut' }}
+                  className={`absolute top-0 left-0 h-full ${barColor} rounded-sm`}
+                />
+
+                <p className='absolute right-1 top-1/2 -translate-y-1/2 text-sm'>level {level}</p>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </FramedSection>
   );
@@ -74,7 +69,7 @@ const skills = [
   {
     name: 'React',
     icon: <SiReact size={24} className='text-cyan-400' />,
-    level: '9/10',
+    level: '8.5/10',
     barColor: 'bg-cyan-400',
   },
   {
@@ -86,19 +81,19 @@ const skills = [
   {
     name: 'TypeScript',
     icon: <SiTypescript size={24} className='text-blue-500' />,
-    level: '8.5/10',
+    level: '8/10',
     barColor: 'bg-blue-500',
   },
   {
     name: 'JavaScript',
     icon: <SiJavascript size={24} className='text-yellow-400' />,
-    level: '9.5/10',
+    level: '9/10',
     barColor: 'bg-yellow-400',
   },
   {
     name: 'HTML',
     icon: <SiHtml5 size={24} className='text-orange-500' />,
-    level: '10/10',
+    level: '9.5/10',
     barColor: 'bg-orange-500',
   },
   {
@@ -128,19 +123,19 @@ const skills = [
   {
     name: 'Python',
     icon: <SiPython size={24} className='text-gray-500 opacity-40' />,
-    level: 'Not Yet',
+    level: 'locked',
     barColor: 'bg-gray-700 opacity-20',
   },
   {
     name: '.NET',
     icon: <SiDotnet size={24} className='text-gray-500 opacity-40' />,
-    level: 'Not Yet',
+    level: 'locked',
     barColor: 'bg-gray-700 opacity-20',
   },
   {
     name: 'C#',
-    icon: 'C#',
-    level: 'Not Yet',
+    icon: '',
+    level: 'locked',
     barColor: 'bg-gray-700 opacity-20',
   },
 ];
