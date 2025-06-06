@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import FramedSection from './FramedSection';
-import Button from './Button';
+import FramedSection from '../ui/FramedSection';
+import Button from '../ui/Button';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 

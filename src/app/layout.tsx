@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Press_Start_2P, Space_Mono } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/layout/Navbar';
 
 const pressStart2p = Press_Start_2P({
   variable: '--font-press-start-2p',

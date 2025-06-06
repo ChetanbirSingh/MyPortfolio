@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Button from './Button';
+import Button from '../ui/Button';
 
 export default function HeroSection() {
   return (

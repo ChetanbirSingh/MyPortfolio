@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
-import SectionTitleSign from './SectionTitleSign';
+import SectionTitleSign from '../ui/SectionTitleSign';
 
 export default function SocialLinks() {
   return (

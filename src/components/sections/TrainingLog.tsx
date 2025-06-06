@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import FramedSection from './FramedSection';
+import FramedSection from '../ui/FramedSection';
 
 const trainings = [
   {

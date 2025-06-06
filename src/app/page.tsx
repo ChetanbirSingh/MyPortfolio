@@ -1,9 +1,9 @@
-import HeroSection from '@/components/HeroSection';
-import Stats from '@/components/Stats';
-import Inventory from '@/components/Inventory';
-import TrainingLog from '@/components/TrainingLog';
-import SideQuests from '@/components/SideQuests';
-import ContactSection from '@/components/Contact';
+import HeroSection from '@/components/sections/HeroSection';
+import Stats from '@/components/sections/Stats';
+import Inventory from '@/components/sections/Inventory';
+import TrainingLog from '@/components/sections/TrainingLog';
+import SideQuests from '@/components/sections/SideQuests';
+import ContactSection from '@/components/sections/Contact';
 export default function Home() {
   return (
     <main>

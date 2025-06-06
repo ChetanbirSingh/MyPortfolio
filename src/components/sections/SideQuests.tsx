@@ -1,5 +1,5 @@
 'use client';
-import SectionTitleSign from './SectionTitleSign';
+import SectionTitleSign from '../ui/SectionTitleSign';
 import { motion } from 'framer-motion';
 import { GiSpellBook, GiStarSwirl } from 'react-icons/gi';
 import { SiGithub, SiVercel } from 'react-icons/si';

@@ -1,5 +1,5 @@
 'use client';
-import FramedSection from './FramedSection';
+import FramedSection from '../ui/FramedSection';
 import { motion } from 'framer-motion';
 
 import {
