@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className='w-full flex justify-center z-50'>
       <nav
-        className='fixed top-0 w-full bg-[#736354] shadow-lg backdrop-blur-xl 
+        className='fixed top-0 w-full bg-[#736354] shadow-lg 
         flex flex-col md:flex-row md:items-center justify-between px-6 py-4 z-50'
       >
         <div className='flex justify-between items-center w-full md:w-auto'>
@@ -28,7 +28,7 @@ export default function Header() {
 
           <button
             onClick={() => setOpen(!open)}
-            className='md:hidden text-white'
+            className='md:hidden'
             aria-label='Toggle Menu'
           >
             {open ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
@@ -55,7 +55,7 @@ export default function Header() {
             >
               <Link
                 href={href}
-                className='text-white hover:underline'
+                className='hover:underline'
                 onClick={() => setOpen(false)}
               >
                 {name}
@@ -73,7 +73,7 @@ export default function Header() {
             onClick={() =>
               window.open('https://www.github.com/ChetanbirSingh', '_blank', 'noopener,noreferrer')
             }
-            className='px-4 py-2 bg-black text-white rounded-xl cursor-pointer'
+            className='px-4 py-2 bg-black rounded-xl cursor-pointer'
           >
             GitHub
           </motion.button>
