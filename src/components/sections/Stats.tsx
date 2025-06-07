@@ -7,11 +7,11 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 
 const aboutMe = [
-  `I'm Chetanbir Singh, started my tech journey at 16, driven by curiosity and a love for building things that live on the web. I spent those early years exploring code, learning through experimentation, and building personal projects just for the thrill of it.`,
+  `I'm Chetanbir Singh. I got into tech at 16, just messing around with code and building random projects for fun. That curiosity turned into a real passion for web development.`,
 
-  `Currently, I’m a web development student at the University of Alberta, specializing in full-stack development. My focus is on creating clean, responsive user interfaces and solving real-world problems through functional design and code.`,
+  `Right now, I'm a full-stack development student at the University of Alberta. I focus on creating clean, responsive UIs and building projects that actually solve problems.`,
 
-  `I enjoy crafting experiences that feel intuitive and purposeful. Whether it’s building an AI-powered tool or experimenting with creative UI themes, I’m always looking for ways to blend logic with creativity.`,
+  `During high school, I designed and deployed two responsive websites for small businesses. I managed the full process — from gathering client requirements and building mobile-friendly UIs with HTML, CSS, and JavaScript, to deploying the sites and refining them based on client feedback.`,
 ];
 
 export default function StatsSection() {
@@ -65,7 +65,7 @@ export default function StatsSection() {
           </motion.div>
         </div>
 
-        <div className='flex flex-col justify-between gap-4 text-sm sm:text-base sm:max-w-3xl leading-6 p-0 md:px-2 '>
+        <div className='flex flex-col justify-between text-sm sm:text-base sm:max-w-3xl leading-6 p-0 md:px-2 '>
           {aboutMe.map((text, idx) => (
             <motion.p
               key={idx}
@@ -73,7 +73,7 @@ export default function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className='mb-4 text-sm leading-relaxed text-white'
+              className='text-sm leading-relaxed text-white'
             >
               {text}
             </motion.p>
