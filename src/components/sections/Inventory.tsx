@@ -13,6 +13,7 @@ import {
   SiGit,
   SiDotnet,
   SiPython,
+  SiMysql,
 } from 'react-icons/si';
 
 import { FaCuttlefish } from 'react-icons/fa';
@@ -22,9 +23,7 @@ export default function Inventory() {
     <FramedSection heading='Inventory' mbHeading='Skills'>
       <div className='grid grid-cols-1 sm:grid-cols-2 gap-8 md:p-20 p-2'>
         {skills.map(({ name, icon, level, barColor }, idx) => {
-          const [val, max] = level.split('/').map(Number);
-          if (isNaN(val) || isNaN(max)) return null;
-
+          const [val = 0, max = 10] = level.split('/').map(Number);
           return (
             <article key={idx} className='skill-item' aria-labelledby={`skill-${idx}`}>
               <div className='flex items-center gap-4 mb-3'>
@@ -101,6 +100,12 @@ const skills = [
     icon: <SiCss3 size={24} className='text-blue-400' />,
     level: '9.5/10',
     barColor: 'bg-blue-400',
+  },
+  {
+    name: 'MySQL',
+    icon: <SiMysql size={30} className='text-[#F29111]' />,
+    level: '5/10',
+    barColor: 'bg-[#F29111]',
   },
   {
     name: 'Figma',
