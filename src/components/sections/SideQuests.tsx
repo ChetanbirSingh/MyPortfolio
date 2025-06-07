@@ -2,7 +2,8 @@
 import SectionTitleSign from '../ui/SectionTitleSign';
 import { motion } from 'framer-motion';
 import { GiSpellBook, GiStarSwirl } from 'react-icons/gi';
-import { SiGithub, SiVercel } from 'react-icons/si';
+import { SiGithub } from 'react-icons/si';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const sideQuests = [
   {
@@ -77,7 +78,7 @@ export default function SideQuests() {
                   className='px-4 py-2 text-[#ffe3b8] hover:text-[#ecdbd1] transition cursor-pointer text-lg'
                   onClick={() => window.open(demo, '_blank')}
                 >
-                  <SiVercel size={22} />
+<FaExternalLinkAlt size={18} title='Live Site' />
                 </button>
               </div>
 
