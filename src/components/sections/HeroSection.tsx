@@ -43,7 +43,7 @@ export default function HeroSection() {
           >
             <Button
               onClick={() => {
-                console.warn('TODO: hook up resume download!');
+                window.open('/resume.pdf', '_blank', 'noopener,noreferrer');
               }}
               theme='yellow'
             >

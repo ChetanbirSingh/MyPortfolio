@@ -86,7 +86,12 @@ export default function StatsSection() {
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
             viewport={{ once: true }}
           >
-            <Button onClick={() => {}} theme='yellow'>
+            <Button
+              onClick={() => {
+                window.open('/resume.pdf', '_blank', 'noopener,noreferrer');
+              }}
+              theme='yellow'
+            >
               My Resume
             </Button>
             <Button
