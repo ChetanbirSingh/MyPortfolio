@@ -51,7 +51,7 @@ export default function StatsSection() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
             viewport={{ once: true }}
-            className='cursor-grab active:cursor-grabbing w-[200px] h-[250px] relative'
+            className='cursor-grab active:cursor-grabbing w-[200px] aspect-[2/3] relative'
           >
             <Image
               src='/avatar.webp'
