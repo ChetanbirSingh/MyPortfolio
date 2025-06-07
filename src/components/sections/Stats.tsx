@@ -65,7 +65,7 @@ export default function StatsSection() {
           </motion.div>
         </div>
 
-        <div className='flex flex-col justify-between text-sm sm:text-base sm:max-w-3xl leading-6 p-0 md:px-2 '>
+        <div className='flex flex-col justify-between sm:max-w-3xl leading-6 p-0 md:px-2 '>
           {aboutMe.map((text, idx) => (
             <motion.p
               key={idx}
@@ -73,7 +73,7 @@ export default function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className='text-sm leading-relaxed text-white'
+              className='py-2 md:py-0'
             >
               {text}
             </motion.p>
