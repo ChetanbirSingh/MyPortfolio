@@ -18,6 +18,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://chetanbir.me'),
   title: 'Chetanbir Singh | Frontend Developer Portfolio',
   description:
     'Portfolio of Chetanbir Singh — frontend developer focused on building clean, responsive UIs and solving real-world problems through creative and functional web design.',
