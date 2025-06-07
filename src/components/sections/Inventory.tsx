@@ -33,7 +33,7 @@ export default function Inventory() {
                 >
                   {icon}
                 </div>
-                <h3 id={`skill-${idx}`} className='text-white text-1xl'>
+                <h3 id={`skill-${idx}`}>
                   {name}
                 </h3>
               </div>

@@ -70,17 +70,17 @@ export default function TrainingLog() {
                 '
               >
                 <div className='flex items-center gap-3 flex-wrap'>
-                  <span className='text-white pixel-font text-sm'>{date}</span>
+                  <span className='text-sm'>{date}</span>
                   <span className={`px-2 py-0.5 text-sm border ${border} rounded-sm`}>
                     {status}
                   </span>
                 </div>
 
-                <h3 className='text-white text-xl md:text-xl font-bold pixel-font leading-tight'>
+                <h3 className='text-xl md:text-xl font-bold leading-tight'>
                   {title}
                 </h3>
 
-                <p className='text-white text-sm pixel-font opacity-90'>{desc}</p>
+                <p className='pixel-font opacity-90'>{desc}</p>
               </div>
             </motion.li>
           ))}

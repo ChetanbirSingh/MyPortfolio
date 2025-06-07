@@ -60,7 +60,7 @@ export default function SideQuests() {
                 />
               </div>
 
-              <h3 className='text-xl sm:text-2xl text-[#ffe3b8] font-bold pixel-font tracking-wide flex items-center gap-2 px-4'>
+              <h3 className='text-xl sm:text-2xl text-[#ffe3b8] font-bold tracking-wide flex items-center gap-2 px-4'>
                 <GiSpellBook className='text-[#ffe3b8]' /> {title}
               </h3>
 
