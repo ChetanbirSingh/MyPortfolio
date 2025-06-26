@@ -33,9 +33,7 @@ export default function Inventory() {
                 >
                   {icon}
                 </div>
-                <h3 id={`skill-${idx}`}>
-                  {name}
-                </h3>
+                <h3 id={`skill-${idx}`}>{name}</h3>
               </div>
 
               <div
@@ -127,9 +125,9 @@ const skills = [
   },
   {
     name: 'Python',
-    icon: <SiPython size={24} className='text-gray-500 opacity-40' />,
-    level: 'locked',
-    barColor: 'bg-gray-700 opacity-20',
+    icon: <SiPython size={24} className='text-[#F7DB63]' />,
+    level: '3/10',
+    barColor: 'bg-[#F7DB63]',
   },
   {
     name: '.NET',
