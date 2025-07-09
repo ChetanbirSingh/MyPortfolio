@@ -32,7 +32,7 @@ export default function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.4 }}
           >
-            Frontend Dev. No Bugs Survive.
+            Fullstack Web Dev. No Bugs Survive.
           </motion.p>
 
           <motion.div
