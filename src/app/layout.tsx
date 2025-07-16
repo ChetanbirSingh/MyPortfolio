@@ -19,13 +19,15 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://chetanbir.me'),
-  title: 'Chetanbir Singh | Frontend Developer Portfolio',
+  title: 'Chetanbir Singh | Fullstack Developer Portfolio',
   description:
-    'Portfolio of Chetanbir Singh — frontend developer focused on building clean, responsive UIs and solving real-world problems through creative and functional web design.',
+    'Portfolio of Chetanbir Singh — fullstack developer focused on building clean, responsive UIs and solving real-world problems through creative and functional web design.',
   keywords: [
     'Chetanbir Singh',
     'Chetanbir',
+    'Fullstack Web Developer',
     'Frontend Web Developer',
+    'Backend Web Developer',
     'React Developer',
     'Next.js Portfolio',
     'TypeScript Developer',
