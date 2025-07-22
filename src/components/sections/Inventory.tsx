@@ -14,6 +14,7 @@ import {
   SiDotnet,
   SiPython,
   SiMysql,
+  SiFlask,
 } from 'react-icons/si';
 
 import { FaCuttlefish } from 'react-icons/fa';
@@ -128,6 +129,12 @@ const skills = [
     icon: <SiPython size={24} className='text-[#F7DB63]' />,
     level: '3/10',
     barColor: 'bg-[#F7DB63]',
+  },
+  {
+    name: 'Flask',
+    icon: <SiFlask size={24} />,
+    level: '5',
+    barColor: 'bg-gray-400',
   },
   {
     name: '.NET',
