@@ -15,6 +15,8 @@ import {
   SiPython,
   SiMysql,
   SiFlask,
+  SiAdobephotoshop,
+  SiAdobeillustrator,
 } from 'react-icons/si';
 
 import { FaCuttlefish } from 'react-icons/fa';
@@ -111,6 +113,18 @@ const skills = [
     icon: <SiFigma size={24} className='text-pink-500' />,
     level: '6/10',
     barColor: 'bg-pink-500',
+  },
+  {
+    name: 'Photoshop',
+    icon: <SiAdobephotoshop size={24} className='text-blue-500' />,
+    level: '6/10',
+    barColor: 'bg-blue-500',
+  },
+  {
+    name: 'Illustrator',
+    icon: <SiAdobeillustrator size={24} className='text-red-500' />,
+    level: '6/10',
+    barColor: 'bg-red-500',
   },
   {
     name: 'Git',
