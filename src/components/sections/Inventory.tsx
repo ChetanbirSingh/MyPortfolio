@@ -67,13 +67,13 @@ const skills = [
   {
     name: 'React',
     icon: <SiReact size={24} className='text-cyan-400' />,
-    level: '8.5/10',
+    level: '7.5/10',
     barColor: 'bg-cyan-400',
   },
   {
     name: 'Next.js',
     icon: <SiNextdotjs size={24} className='text-white' />,
-    level: '8/10',
+    level: '7.5/10',
     barColor: 'bg-neutral-300',
   },
   {
@@ -85,19 +85,19 @@ const skills = [
   {
     name: 'JavaScript',
     icon: <SiJavascript size={24} className='text-yellow-400' />,
-    level: '9/10',
+    level: '8/10',
     barColor: 'bg-yellow-400',
   },
   {
     name: 'HTML',
     icon: <SiHtml5 size={24} className='text-orange-500' />,
-    level: '9.5/10',
+    level: '9/10',
     barColor: 'bg-orange-500',
   },
   {
     name: 'CSS',
     icon: <SiCss3 size={24} className='text-blue-400' />,
-    level: '9.5/10',
+    level: '9/10',
     barColor: 'bg-blue-400',
   },
   {
