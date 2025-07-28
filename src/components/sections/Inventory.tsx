@@ -141,7 +141,7 @@ const skills = [
   {
     name: 'Python',
     icon: <SiPython size={24} className='text-[#F7DB63]' />,
-    level: '3/10',
+    level: '5/10',
     barColor: 'bg-[#F7DB63]',
   },
   {
