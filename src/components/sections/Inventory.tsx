@@ -158,8 +158,8 @@ const skills = [
   },
   {
     name: 'C#',
-    icon: '',
-    level: 'locked',
-    barColor: 'bg-gray-700 opacity-20',
+    icon: 'C#',
+    level: '5/10',
+    barColor: 'bg-purple-400',
   },
 ];

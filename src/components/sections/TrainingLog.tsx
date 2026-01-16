@@ -12,11 +12,11 @@ const trainings = [
     border: 'border-yellow-400 text-yellow-300',
   },
   {
-    date: 'Started Feb 2025',
-    status: 'Active',
+    date: 'Completed Jan 2026',
+    status: 'Completed',
     title: "CS50 - Harvard's Intro to Computer Science",
     desc: 'Learning core computer science topics like algorithms, memory, and low-level programming using C and Python.',
-    border: 'border-yellow-400 text-yellow-300',
+    border: 'border-emerald-400 text-emerald-300',
   },
   {
     date: 'Completed July 2024',
